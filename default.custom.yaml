@@ -1,0 +1,6 @@
+patch:
+  menu:
+    page_size: 6
+  schema_list:
+  - schema: luna_pinyin           # 朙月拼音
+  - schema: terra_pinyin          # 地球拼音
