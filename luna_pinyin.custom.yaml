@@ -11,7 +11,7 @@ patch:
       reset: 1
       states: [ "漢字", "汉字" ]
     
- #  加載 easy_en 依賴
+  # 加載 easy_en 依賴
   "schema/dependencies/@1": easy_en
   # 載入翻譯英文的碼表翻譯器，取名爲 english〔方案选单〕
   "engine/translators/@4": table_translator@english
@@ -19,18 +19,36 @@ patch:
   english:
     dictionary: easy_en
     spelling_hints: 9
-    enable_completion: false
-    enable_sentence: false
+    enable_completion: true
+    enable_sentence: true
     initial_quality: -2
 
- #  載入朙月拼音擴充詞庫
+  # 載入朙月拼音擴充詞庫
   "translator/dictionary": luna_pinyin.extended
   # 改寫拼寫運算，使得含西文的詞彙（位於 luna_pinyin.cn_en.dict.yaml 中）不影響簡拼功能（注意，此功能只適用於朙月拼音系列方案，不適用於各類雙拼方案）
   # 本條補靪只在「小狼毫 0.9.30」、「鼠鬚管 0.9.25 」、「Rime-1.2」及更高的版本中起作用。
   "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
 
+# speller:
+#   algebra:
+#     - derive/^q([iu])(.+)/w$1$2/   # wi* changed to qi*
+#     - derive/^w([aeo]+)(.+)/q$1$2/ # qe* changed to we*
+#     - derive/^xi([aeiou])/ci$1/
+#     - erase/^xx$/
+#     - abbrev/^([a-z]).+$/$1/
+#     - abbrev/^([zcs]h).+$/$1/
+#     - derive/^([nl])ve$/$1ue/
+#     - derive/^([jqxy])u/$1v/
+#     - derive/un$/uen/
+#     - derive/ui$/uei/
+#     - derive/iu$/iou/
+#     - derive/([aeiou])ng$/$1gn/
+#     - derive/([dtngkhrzcs])o(u|ng)$/$1o/
+#     - derive/ong$/on/
+#     - derive/ao$/oa/
+#     - derive/([iu])a(o|ng?)$/a$1$2/
 
- #  符号快速输入和部分符号的快速上屏
+  # 符号快速输入和部分符号的快速上屏
   punctuator:
     import_preset: symbols
     symbols:
