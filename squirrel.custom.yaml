@@ -25,5 +25,5 @@ patch:
       ascii_mode: false
     com.microsoft.Outlook:
       ascii_mode: false
-    com.apple.launchpad.launcher:
+    com.apple.finder:
       ascii_mode: false
