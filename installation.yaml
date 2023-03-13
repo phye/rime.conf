@@ -1,8 +1,8 @@
 distribution_code_name: Squirrel
 distribution_name: "鼠鬚管"
-distribution_version: 0.14.0
+distribution_version: 0.16.2
 install_time: "Tue Jun  4 14:37:51 2019"
 installation_id: "phye-mbp"
-rime_version: 1.5.3
-update_time: "Thu Feb 13 23:19:02 2020"
-sync_dir: '/Users/Phye/ws/rime.data'
+rime_version: 1.8.5
+sync_dir: "~/ws/rime.data"
+update_time: "Mon Feb 13 10:22:09 2023"
