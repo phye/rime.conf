@@ -37,4 +37,6 @@ UTF-8	utfba
 scomper@gmail.com	smail
 scomper	scomper
 macOS High Sierra	macoshs
-
+k8s	kbs
+goosefsx	gfx
+goosefs	gfs
