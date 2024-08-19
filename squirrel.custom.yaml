@@ -4,6 +4,7 @@ patch:
   style:
     color_scheme: lost_temple
     horizontal: true
+    candidate_list_layout: linear
     inline_preedit: true
     font_point: 16
     label_font_point: 14
